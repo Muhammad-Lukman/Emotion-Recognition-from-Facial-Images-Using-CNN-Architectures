@@ -71,6 +71,25 @@ print("Path to dataset files:", path)
 - Class weights applied to mitigate dataset imbalance.
 
 ---
+## Prediction Example
+
+```python
+import cv2
+import tensorflow as tf
+
+# Load image
+img = cv2.imread("path_to_image.jpg")
+img = tf.constant(img, dtype = tf.float32)
+img = tf.expand_dims(img, axis=0) # Add batch dimension
+
+# Predict
+model = tf.keras.models.load_model("./models/EmotionModelBest.keras")
+class_names = ['angry', 'happy', 'sad']
+pred = class_names[tf.argmax(model.predict(img), axis=-1).numpy()[0]]
+print("Predicted Emotion:", pred)
+```
+
+---
 
 ## Repository Structure
 ```bash
@@ -92,24 +111,6 @@ Emotion-Recognition-from-Facial-Images-Using-CNN-Architectures/
 ```
 
 ---
-
-## Prediction Example
-
-```python
-import cv2
-import tensorflow as tf
-
-# Load image
-img = cv2.imread("path_to_image.jpg")
-img = tf.constant(img, dtype = tf.float32)
-img = tf.expand_dims(img, axis=0) # Add batch dimension
-
-# Predict
-model = tf.keras.models.load_model("./models/EmotionModelBest.keras")
-class_names = ['angry', 'happy', 'sad']
-pred = class_names[tf.argmax(model.predict(img), axis=-1).numpy()[0]]
-print("Predicted Emotion:", pred)
-```
 
 ## Usage
 
