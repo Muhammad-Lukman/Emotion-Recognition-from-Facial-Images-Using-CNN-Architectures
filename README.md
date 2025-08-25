@@ -6,6 +6,7 @@ The dataset was preprocessed, augmented, and trained using TensorFlow/Keras with
 ---
 
 ## Historical Context
+The CNN used in this project is inspired by **LeNet-5**, one of the earliest successful convolutional neural networks, developed by **Yann LeCun et al. in 1998** for handwritten digit recognition (MNIST dataset). 
 
 - **LeNet-5** was created by **Yann LeCun**, considered the “father of CNNs,” in 1998.  
 - It was originally designed to classify handwritten digits (MNIST dataset).  
@@ -15,9 +16,8 @@ The dataset was preprocessed, augmented, and trained using TensorFlow/Keras with
 ---
 
 ## Model Architecture
-
-The CNN used in this project is inspired by **LeNet-5**, one of the earliest successful convolutional neural networks, developed by **Yann LeCun et al. in 1998** for handwritten digit recognition (MNIST dataset).  
-Although adapted for emotion recognition, the structure retains the same principles:
+ 
+Although we adapted LeNet for emotion recognition, the structure retains the same principles:
 
 - **Convolutional Layers** – Learn spatial features (edges, textures, facial expressions).  
 - **Pooling Layers** – Reduce spatial dimensions while keeping important features.  
