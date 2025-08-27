@@ -8,7 +8,7 @@ The dataset was preprocessed, augmented, and trained using TensorFlow/Keras with
 ## Historical Context
 The CNN used in this project is inspired by **LeNet-5**, one of the earliest successful convolutional neural networks, developed by **Yann LeCun et al. in 1998** for handwritten digit recognition (MNIST dataset). 
 
-- **LeNet-5** was created by **Yann LeCun**, considered the “father of CNNs,” in 1998.  
+- **LeNet-5** was created by **Yann LeCun**, considered the “father of CNNs,” in 1990s.  
 - It was originally designed to classify handwritten digits (MNIST dataset).  
 - LeNet’s success paved the way for modern CNNs like AlexNet, VGG, ResNet, and EfficientNet.  
 - Our model follows a similar **conv–pool–conv–pool–fc–softmax** design but is adapted for **facial emotion recognition**.
